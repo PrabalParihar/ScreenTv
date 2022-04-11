@@ -14,7 +14,7 @@ export default class Movies extends Component {
     }
     loadMoreMovies = async() => {
         let newPage = this.state.currPage+1;
-        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=8b6210bdbcb2de90beda96a48da163b9&language=en-US&page=${newPage}`);
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=8b6210bdbcb2de90beda163b9&language=en-US&page=${newPage}`);
         let data = res.data
         // console.log(data);
         this.setState({
@@ -24,7 +24,7 @@ export default class Movies extends Component {
     }
     async componentDidMount(){
         //Side effects 
-        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=8b6210bdbcb2de90beda96a48da163b9&language=en-US&page=${this.state.currPage}`);
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=8b6210bdbcb2de90a48da163b9&language=en-US&page=${this.state.currPage}`);
         let data = res.data
         // console.log(data);
         this.setState({
@@ -42,7 +42,7 @@ export default class Movies extends Component {
     changeMovies=async()=>{
         console.log("changemovies called");
         console.log(this.state.currPage);
-        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=8b6210bdbcb2de90beda96a48da163b9&language=en-US&page=${this.state.currPage}`);
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=8b6210bdbcb2de9163b9&language=en-US&page=${this.state.currPage}`);
         let data = res.data
         // console.log(data);
         this.setState({
